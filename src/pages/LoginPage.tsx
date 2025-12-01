@@ -2,6 +2,7 @@ import { useState, FormEvent } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { FirebaseError } from 'firebase/app';
+import logoImage from '../assets/logo.png';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -54,6 +55,7 @@ export default function LoginPage() {
 
   return (
     <div className="page-container">
+      <img src={logoImage} alt="Southern Spoon Logo" className="page-title-logo" />
       <div className="auth-card">
         <h1>Welcome Back</h1>
         <p className="auth-subtitle">Log in to The Southern Spoon</p>

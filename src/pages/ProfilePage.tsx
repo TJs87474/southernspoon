@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { sendPasswordResetEmail, updatePassword, EmailAuthProvider, reauthenticateWithCredential } from 'firebase/auth';
-import { auth } from '../firebase/config';
+import { updatePassword, EmailAuthProvider, reauthenticateWithCredential } from 'firebase/auth';
 import Navigation from '../components/Navigation';
 import './ProfilePage.css';
 
@@ -17,24 +16,6 @@ export default function ProfilePage() {
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-
-  const handlePasswordReset = async () => {
-    if (!currentUser?.email) return;
-    
-    try {
-      setLoading(true);
-      setError('');
-      setMessage('');
-      
-      await sendPasswordResetEmail(auth, currentUser.email);
-      setMessage('Password reset email sent! Check your inbox.');
-    } catch (err) {
-      setError('Failed to send password reset email. Please try again.');
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const handlePasswordChange = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -107,11 +88,6 @@ export default function ProfilePage() {
               <span className="info-label">Email:</span>
               <span className="info-value">{currentUser?.email}</span>
             </div>
-            
-            <div className="info-item">
-              <span className="info-label">User ID:</span>
-              <span className="info-value">{currentUser?.uid}</span>
-            </div>
           </div>
 
           {message && <div className="success-message">{message}</div>}
@@ -125,14 +101,6 @@ export default function ProfilePage() {
                   className="btn-secondary"
                 >
                   Change Password
-                </button>
-                
-                <button 
-                  onClick={handlePasswordReset}
-                  className="btn-secondary"
-                  disabled={loading}
-                >
-                  {loading ? 'Sending...' : 'Send Password Reset Email'}
                 </button>
                 
                 <button 

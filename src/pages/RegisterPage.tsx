@@ -2,6 +2,7 @@ import { useState, FormEvent } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { FirebaseError } from 'firebase/app';
+import logoImage from '../assets/logo.png';
 
 export default function RegisterPage() {
   const [email, setEmail] = useState('');
@@ -71,6 +72,7 @@ export default function RegisterPage() {
 
   return (
     <div className="page-container">
+      <img src={logoImage} alt="Southern Spoon Logo" className="page-title-logo" />
       <div className="auth-card">
         <h1>Join The Southern Spoon</h1>
         <p className="auth-subtitle">Create an account to discover events</p>

@@ -26,6 +26,7 @@ body, html {
   min-height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url('/src/assets/skyline.jpg');
@@ -34,6 +35,23 @@ body, html {
   background-repeat: no-repeat;
   padding: 20px;
   overflow-x: hidden;
+  gap: 30px;
+}
+
+.page-title {
+  font-family: 'Lora', serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: white !important;
+  margin: 0;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.page-title-logo {
+  max-width: 300px;
+  height: auto;
+  filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.3));
 }
 
 /* Auth Card */
@@ -47,7 +65,8 @@ body, html {
 }
 
 .auth-card h1 {
-  font-size: px;
+  font-family: 'Lora', serif;
+  font-size: 32px;
   font-weight: 700;
   color: #757575;
   margin-bottom: 16px;
@@ -77,8 +96,10 @@ body, html {
 .form-group input {
   width: 100%;
   padding: 18px 22px;
+  background-color: rgb(234, 234, 234);
+  color: #2d3748;
   border: 2px solid #e2e8f0;
-  border-radius: 10px;
+  border-radiußs: 10px;
   font-size: 18px;
   transition: border-color 0.2s;
 }
@@ -97,7 +118,7 @@ body, html {
 .btn-primary {
   width: 100%;
   padding: 18px 32px;
-  background: linear-gradient(135deg, #d1d9ff 0%, #ddbcff 100%);
+  background: #92bff6;
   color: white;
   border: none;
   border-radius: 10px;
@@ -138,7 +159,7 @@ body, html {
 }
 
 .auth-link a {
-  color: #667eea;
+  color: #6b93c3;
   text-decoration: none;
   font-weight: 600;
 }

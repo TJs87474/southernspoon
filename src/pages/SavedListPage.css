@@ -2,8 +2,8 @@
   font-family: 'Lora', serif;
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 40px 20px;
+  background: linear-gradient(135deg, #c6f9da 0%, #87631f 100%);
+  padding: 200px 20px 40px;
   overflow-x: hidden;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .sort-controls select option {
-  background: #667eea;
+  background: #92bff6;
   color: white;
 }
 
@@ -174,7 +174,7 @@
 
 .saved-event-venue {
   font-size: 15px;
-  color: #667eea;
+  color: #92bff6;
   font-weight: 600;
   margin: 0;
   display: flex;
@@ -215,7 +215,7 @@
 .saved-more-info-btn {
   flex: 1;
   padding: 12px 24px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #92bff6;
   color: white;
   border: none;
   border-radius: 10px;
@@ -301,7 +301,7 @@
 .saved-back-section h4 {
   font-size: 14px;
   font-weight: 700;
-  color: #667eea;
+  color: #92bff6;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -356,7 +356,7 @@
 .saved-event-link {
   display: inline-block;
   padding: 12px 24px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #92bff6;
   color: white;
   text-decoration: none;
   border-radius: 10px;
