@@ -1,0 +1,97 @@
+.discovery-container {
+  font-family: 'Lora', serif;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.discovery-header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.discovery-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.event-counter {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 600px;
+  margin-bottom: 40px;
+}
+
+.loading {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.no-events {
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.no-events h2 {
+  font-size: 32px;
+  color: #1a202c;
+  margin-bottom: 16px;
+}
+
+.no-events p {
+  font-size: 18px;
+  color: #718096;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn-no,
+.btn-yes {
+  padding: 18px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-no {
+  background: white;
+  color: #f56565;
+}
+
+.btn-yes {
+  background: white;
+  color: #48bb78;
+}
+
+.btn-no:hover,
+.btn-yes:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
